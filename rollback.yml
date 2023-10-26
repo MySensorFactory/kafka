@@ -1,0 +1,5 @@
+order:
+  - kafka_sts.yaml
+  - zookeeper_sts.yaml
+  - zookeeper_svc.yaml
+  - kafka_svc.yaml
