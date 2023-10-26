@@ -36,4 +36,4 @@ spec:
             - name: ALLOW_ANONYMOUS_LOGIN
               value: "yes"
             - name: ZOO_SERVERS
-              value:  crs-zookeeper-0.zookeeper-cluster.default.svc.cluster.local:2888:3888
+              value:  zookeeper-cluster:2181:2888:3888
