@@ -3,3 +3,5 @@ order:
   - zookeeper_sts.yaml
   - zookeeper_svc.yaml
   - kafka_svc.yaml
+  - schema-registry_sts.yml
+  - schema-registry_svc.yml
