@@ -7,7 +7,7 @@ env:
         S3_CICD_FUNCTIONS_DESTINATION: applications/cicd
         LAMBDAS_SOURCE_FOLDER: lambda_functions
         CICD_FUNCTIONS_SOURCE_FOLDER: structure/functions
-        S3_DEPLOY_CONFIG_DIR: applications/database/
+        S3_DEPLOY_CONFIG_DIR: applications/kafka/
 
 phases: 
     install:
