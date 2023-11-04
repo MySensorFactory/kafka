@@ -5,5 +5,5 @@ order:
   - kafka_sts.yml
   - schema-registry_svc.yml
   - schema-registry_sts.yml
-  - kube/topic_list_cm.yml
+  - topic_list_cm.yml
   - init_topics_job.yml
