@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: create-kafka-topics
+  namespace: factory
+spec:
+  template:
+    metadata:
+      labels:
+        app: create-kafka-topics
+    spec:
+      containers:
+      - name: create-topics
+        image: confluentinc/cp-kafka:7.3.2
+        command: ["bash", "-c"]
+        args:
+        - |
+          topics=$(cat /etc/config/topics)
+          bootstrap_server="kafka-cluster:9092"
+          for topic in $topics; do
+            kafka-topics --create --topic ${topic} --partitions 1 --replication-factor 1 --bootstrap-server ${bootstrap_server}
+          done
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+      restartPolicy: Never
+      volumes:
+      - name: config-volume
+        configMap:
+          name: kafka-topics-configmap

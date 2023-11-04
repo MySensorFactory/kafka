@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka-topics-configmap
+  namespace: factory
+data:
+  topics: |
+    - AfterBeginCompressorPressureMean
+    - AfterBoilerTemperatureMean
+    - AfterReturnCompressorPressureMean
+    - BeforeBeginCompressorPressureMean
+    - BeforeBoilerTemperatureMean
+    - BeforeReturnCompressorPressureMean
+    - BeginCompressorNoiseAndVibrationMean
+    - BeginGasCompositionMean
+    - BeginTemperatureMean
+    - CompressedReturnFlowRateMean
+    - InputFlowRateMean
+    - InputGasCompositionMean
+    - NotCompressedReturnFlowRateMean
+    - OutputFlowRateMean
+    - OutputGasCompositionMean
+    - ReactionPerformance
+    - ReturnCompressorNoiseAndVibrationMean
+    - ReturnGasCompositionMean
+    - ReturnTemperatureMean
+    - flowRate
+    - gasComposition
+    - noiseAndVibration
+    - pressure
+    - temperature

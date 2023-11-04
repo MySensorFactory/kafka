@@ -1,7 +1,9 @@
 order:
-  - zookeeper_svc.yaml
-  - zookeeper_sts.yaml
-  - kafka_svc.yaml
-  - kafka_sts.yaml
+  - zookeeper_svc.yml
+  - zookeeper_sts.yml
+  - kafka_svc.yml
+  - kafka_sts.yml
   - schema-registry_svc.yml
   - schema-registry_sts.yml
+  - kube/topic_list_cm.yml
+  - init_topics_job.yml
